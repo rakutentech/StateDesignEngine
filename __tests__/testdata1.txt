@@ -1,0 +1,8 @@
+initial                  => "Accepting reservations" ;
+"Accepting reservations" => "Reservation accepted"   : reserve ;
+"Reservation accepted"   => "Reserved"               : approve;
+"Reserved"               => "Reservation accepted"   : cancel approval;
+"Reservation accepted"   => "Accepting reservations" : reject;
+"Reservation accepted"   => "Accepting reservations" : cancel of reservation;
+"Reserved"               => "Accepting reservations" : cancel;
+"Reserved"               => final                    : car delivered;
