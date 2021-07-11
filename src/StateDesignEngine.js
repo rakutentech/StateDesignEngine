@@ -72,13 +72,13 @@ class StateDesignEngine
 			this.trans[this.states.indexOf(t.from)][i]= this.states.indexOf(t.to);
 			this.nswitchMatrix[this.states.indexOf(t.from)][this.states.indexOf(t.to)].push(i);
 	});			
-		return this;
+		return this.nswitchMatrix;
 	}
 	
  
 	nCoverage(n,mat){
 		n = n || 0;
-
+		
 		if(n < 1){
 			return this.nswitchMatrix;
 		}

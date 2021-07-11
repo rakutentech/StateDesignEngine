@@ -48,10 +48,11 @@ describe('StateDesignEngine', () => {
   });
   it(' createMatrix() : create matrix', () => {
     const s = new StateDesignEngine(engine);
-    s.setScript(read);
+    s.setScript(fs.readFileSync('__tests__/testdata1.txt','utf8'));
+	s.init();
+	console.log("Matrix");
     expect(s.createMatrix).toBeInstanceOf(Function);
- 	expect(s.createMatrix()).toStrictEqual(
-	[
+ 	expect(s.createMatrix()).toStrictEqual([
       [ [], [ 0 ], [], [], [] ],
       [ [], [], [ 1 ], [], [] ],
       [ [], [ 4, 5 ], [], [ 2 ], [] ],
@@ -130,13 +131,13 @@ it(' nCoverage() : can calculate 0 switch coverage', () => {
     let s = new StateDesignEngine(engine);
     s.setScript(read);
 	s.createMatrix();
-	s.printStateEventMatrix();
+	//s.printStateEventMatrix();
   });
     it(' printCoverage() : can print transition matrix', () => {
     let s = new StateDesignEngine(engine);
     s.setScript(read);
 	s.createMatrix();
-	s.printNSwitchMatrix(s.nCoverage(1));
+	//s.printNSwitchMatrix(s.nCoverage(1));
   });
   
   it(' _clean() : can clean all parameters', () => {
