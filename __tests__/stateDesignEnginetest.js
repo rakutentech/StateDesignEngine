@@ -52,7 +52,8 @@ describe('StateDesignEngine', () => {
 	s.init();
 	console.log("Matrix");
     expect(s.createMatrix).toBeInstanceOf(Function);
- 	expect(s.createMatrix()).toStrictEqual([
+	expect(s.createMatrix()).toBeInstanceOf(StateDesignEngine);
+ 	expect(s.nswitchMatrix).toStrictEqual([
       [ [], [ 0 ], [], [], [] ],
       [ [], [], [ 1 ], [], [] ],
       [ [], [ 4, 5 ], [], [ 2 ], [] ],
