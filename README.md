@@ -22,20 +22,17 @@ smtc [-h] <file> [-s <0|1|2... (0:default)>] [-t <t|m|c|d (t:default)>]
 ```
 
 ## sample data
-![alt text](https://github.com/rakutentech/StateDesignEngine/blob/main/__tests__/testdata2.txt)
+![alt text](https://github.com/Shilpa1489/StateDesignEngine/blob/main/__tests__/testdata2.txt)
 
 ``` shell
-$ cat __tests__/testdata1.txt
-initial                  => "Accepting reservations" ;
-"Accepting reservations" => "Reservation accepted"   : reserve ;
-"Reservation accepted"   => "Reserved"               : approve;
-"Reserved"               => "Reservation accepted"   : cancel approval;
-"Reservation accepted"   => "Accepting reservations" : reject;
-"Reservation accepted"   => "Accepting reservations" : cancel of reservation;
-"Reserved"               => "Accepting reservations" : cancel;
-"Reserved"               => final                    : car delivered;
+$ cat __tests__/testdata2.txt
+initial                  => "Default" ;
+"Default" => "period"   : Display period data;
+"Default" => "permanent"   : Display permanent data;
+"period"   => "permanent"               : Display permanent data;
+"permanent"               => "period"   : Display period data;
+"permanent"   => "permanent" : Display permanent data;
 ```
-
 ## zero switch cases
 
 ```shell
