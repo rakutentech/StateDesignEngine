@@ -78,7 +78,7 @@ class StateDesignEngine
  
 	nCoverage(n,mat){
 		n = n || 0;
-
+		
 		if(n < 1){
 			return this.nswitchMatrix;
 		}
