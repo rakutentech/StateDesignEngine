@@ -76,6 +76,6 @@ $ node bin/index.js __tests__/testdata2.txt -t c -s 1
 |7|permanent|Display permanent data|permanent|Display period data|period|
 |8|permanent|Display period data|period|Display permanent data|permanent|
 |9|permanent|Display permanent data|permanent|Display permanent data|permanent|
-=======
+
 
 
