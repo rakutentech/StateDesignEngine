@@ -11,7 +11,7 @@ if (argv['_'].length < 1 || typeof argv['h'] !== 'undefined'){
   console.error(`LICENSE    : ${pkg.license}`);
   console.error("================================================================================");
   console.error("");
-  console.error("Usage: smtc [-h] <file> [-s <0|1|2... (1:default)>] [-t <t|m|c|d (t:default)>]");
+  console.error("Usage: node bin/index.js [-h] <file> [-s <0|1|2... (1:default)>] [-t <t|m|c|d (t:default)>]");
   console.error("");
   process.exit(1);
 }
