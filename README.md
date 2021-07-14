@@ -18,7 +18,7 @@ $ npm i
 # <file>:inputscript
 # -s : switch
 # -t : output type m:matrix/c:testcase coverage/d:diagram
-smtc [-h] <file> [-s <0|1|2... (0:default)>] [-t <t|m|c|d (t:default)>]
+node bin/index.js [-h] <file> [-s <0|1|2... (0:default)>] [-t <t|m|c|d (t:default)>]
 ```
 
 ## sample data
@@ -36,7 +36,7 @@ initial                  => "Default" ;
 ## zero switch cases
 
 ```shell
-$ node bin/index.js __tests__/testdata1.txt -t c
+$ node bin/index.js __tests__/testdata2.txt -t c
 ```
 
 |#|State#1|Event#1|State#2|
