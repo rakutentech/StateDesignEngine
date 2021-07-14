@@ -22,7 +22,7 @@ node bin/index.js [-h] <file> [-s <0|1|2... (0:default)>] [-t <t|m|c|d (t:defaul
 ```
 
 ## sample data
-![alt text](https://github.com/rakutentech/StateDesignEngine/blob/main/__tests__/testdata2.txt)
+[Sample data](https://github.com/rakutentech/StateDesignEngine/blob/main/__tests__/testdata2.txt)
 
 ``` shell
 $ cat __tests__/testdata2.txt
