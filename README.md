@@ -1,5 +1,5 @@
+[![Node.js CI](https://github.com/rakutentech/StateDesignEngine/actions/workflows/node.js.yml/badge.svg)](https://github.com/rakutentech/StateDesignEngine/actions/workflows/node.js.yml)
 # StateDesignEngine
-
 This is a State Design Engine , help to create test design for State transition flow.
 It gives , test coverage of all possible scenarios and also help to reduce the time in designing.
 
@@ -76,3 +76,6 @@ $ node bin/index.js __tests__/testdata2.txt -t c -s 1
 |7|permanent|Display permanent data|permanent|Display period data|period|
 |8|permanent|Display period data|period|Display permanent data|permanent|
 |9|permanent|Display permanent data|permanent|Display permanent data|permanent|
+=======
+
+
