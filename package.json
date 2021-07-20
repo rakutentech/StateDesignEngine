@@ -6,7 +6,7 @@
   "bin": "bin/index.js",
   "scripts": {
     "test": "npx jest",
-    "webpack": "npx webpack node_modules/state-machine-cat/src/index.js --output-library-target window --output-library smcat -o src/smcat.min.js && npx webpack node_modules/markdown/lib/index.js --output-library-target window --output-library markdown -o src/markdown.min.js",
+    "build": "mkdir dist && npx webpack node_modules/state-machine-cat/src/index.js --output-library-target window --output-library smcat -o dist/smcat.min.js && npx webpack node_modules/markdown/lib/index.js --output-library-target window --output-library markdown -o dist/markdown.min.js && echo '{% include form.html %}' >> README.md && cp -r _includes src/StateDesignEngine.js README.md DOCS.md _config.yml dist",
     "docs": "npx jsdoc2md -c jsdoc.conf.json src/StateDesignEngine.js  > DOCS.md"
   },
   "keywords": [
