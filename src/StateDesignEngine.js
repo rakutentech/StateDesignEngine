@@ -208,4 +208,9 @@ class StateDesignEngine
     }, []);
   }
 });
-module.exports = StateDesignEngine;
+//module.exports = StateDesignEngine;
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined'){
+  module.exports = StateDesignEngine;
+} else {
+  window.StateDesignEngine = StateDesignEngine;
+}
