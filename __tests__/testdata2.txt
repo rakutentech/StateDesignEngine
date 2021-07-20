@@ -1,6 +1,0 @@
-initial                  => "Default" ;
-"Default" => "period"   : Display period data;
-"Default" => "permanent"   : Display permanent data;
-"period"   => "permanent"               : Display permanent data;
-"permanent"               => "period"   : Display period data;
-"permanent"   => "permanent" : Display permanent data;
