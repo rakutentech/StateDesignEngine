@@ -44,9 +44,9 @@ $("#render").click(() => {
 
     $("#diagram").html(smcat.render(inputscript));
     const s = new StateDesignEngine(smcat);
-    const nSwitchCoverage = s.setContents(inputscript)
-        .initialize()
-        .nSwitchCoverage($("#switch").val());
+    const nSwitchCoverage = s.setScript(inputscript)
+        .createMatrix()
+        .nCoverage($("#switch").val());
 
     let output = new Array();
     const log = console.log;
@@ -54,7 +54,7 @@ $("#render").click(() => {
         output.push(line);
     };
 
-    s.printTransitions();
+    s.printStateEventMatrix();
     $("#transitions").html(markdown.markdown.toHTML(output.join("\n"), "Maruku"));
 
     output = new Array();
