@@ -18,7 +18,7 @@ initial                  => "Default" ;
       <option value="4">4</option>
       <option value="5">5</option>
    </select>
-   <button id="render" style="margin: 0px; width: 80%; height: 100%;">GO</button>
+   <button id="render" style="margin: 0px; width: 80%; height: 100%;">Display</button>
 </p>
 <h2>Diagram</h2>
 <div id="diagram" style="margin: 0px; width: 100%; height: 100%;background-color: transparent;"></div>
@@ -44,9 +44,9 @@ $("#render").click(() => {
 
     $("#diagram").html(smcat.render(inputscript));
     const s = new StateDesignEngine(smcat);
-    const nSwitchCoverage = s.setContents(inputscript)
-        .initialize()
-        .nSwitchCoverage($("#switch").val());
+    const nSwitchCoverage = s.setScript(inputscript)
+        .createMatrix()
+        .nCoverage($("#switch").val());
 
     let output = new Array();
     const log = console.log;
@@ -54,7 +54,7 @@ $("#render").click(() => {
         output.push(line);
     };
 
-    s.printTransitions();
+    s.printStateEventMatrix();
     $("#transitions").html(markdown.markdown.toHTML(output.join("\n"), "Maruku"));
 
     output = new Array();
