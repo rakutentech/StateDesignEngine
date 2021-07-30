@@ -52,6 +52,7 @@ $ node bin/index.js __tests__/testdata2.txt -t c
 ```shell
 $ node bin/index.js __tests__/testdata2.txt -t m
 ```
+
 ||[None]|Display period data|Display permanent data|Display permanent data|Display period data|Display permanent data|
 |:---|:---|:---|:---|:---|:---|:---| 
 |**initial**|Default||||||
