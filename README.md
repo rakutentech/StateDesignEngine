@@ -53,10 +53,10 @@ $ node bin/index.js __tests__/testdata2.txt -t c
 $ node bin/index.js __tests__/testdata2.txt -t m
 ```
 ||[None]|Display period data|Display permanent data|Display permanent data|Display period data|Display permanent data|
-|:--|:--|:--|:--|:--|:--|:--|
+|:---|:---|:---|:---|:---|:---|:---| 
 |**initial**|Default||||||
-|**Default**||period|permanent||||
-|**period**||||permanent|||
+|**Default**||period|permanent|||| 
+|**period**||||permanent||| 
 |**permanent**|||||period|permanent|
 
 ## one switch cases
